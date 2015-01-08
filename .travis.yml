@@ -5,13 +5,11 @@ install:
   - sudo apt-get update -y
   - chmod +x ./gradlew
 script:
-  -
-  - ./gradlew build
-before-deploy:
   - "echo ACCOUNT"
   - echo ACCOUNT
   - echo 'ACCOUNT'
   - "echo 'ACCOUNT'"
+  - ./gradlew build
 deploy:
   provider: releases
   user: 
