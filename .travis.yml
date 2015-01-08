@@ -9,6 +9,8 @@ script:
   - echo ACCOUNT
   - echo 'ACCOUNT'
   - "echo 'ACCOUNT'"
+  - printenv ACCOUNT
+  - $ACCOUNT
   - ./gradlew build
 deploy:
   provider: releases
