@@ -5,15 +5,15 @@ install:
   - sudo apt-get update -y
   - chmod +x ./gradlew
 script:
+  -
   - ./gradlew build
-before_deploy:
-  - cd build
-  - zip -r build.zip .
 deploy:
   provider: releases
-  user: ACCOUNT
-  password: PASS
-  file: /build/build.zip
+  user: 
+    - secure: ACCOUNT
+  password:
+    - secure: PASS
+  file: /build/libs/*.jar
   skip_cleanup: true
   on:
     branch: release
